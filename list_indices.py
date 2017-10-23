@@ -46,6 +46,6 @@ def list_indices_of_given_as(es_url, availability_set):
 
 
 if __name__ == '__main__':
-    indices_list = list_indices_of_given_as('http://l-nbstores7.ins.cn2.qunar.com:9222/', 'offline')
+    indices_list = list_indices_of_given_as('http://xxx.com:9222/', 'offline')
     for index in indices_list:
         print (index + '\n')

@@ -6,7 +6,7 @@ es request wrapper tool for python
 from es_wrapper_client import ElasticSearchWrapperClient
 
 if __name__ == '__main__':
-    es_client = ElasticSearchWrapperClient("http://l-es2.data.p1.11bee.com:9273/")
+    es_client = ElasticSearchWrapperClient("http://xxx.com:9273/")
     id_file = open('/home/zshell/Desktop/id-list.txt', 'r')
     id_list = id_file.readlines()
     count = 0

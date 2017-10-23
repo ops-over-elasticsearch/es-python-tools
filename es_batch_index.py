@@ -6,7 +6,7 @@ es request command
 from es_wrapper_client import ElasticSearchWrapperClient
 
 if __name__ == '__main__':
-    es_client = ElasticSearchWrapperClient('http://10.90.185.175:9200/')
+    es_client = ElasticSearchWrapperClient('http://xxx.com:9200/')
 
     for i in xrange(0, 9):
         content_file = open('/home/zshell/Desktop/20170925/part-0000' + i.__str__(), 'r')

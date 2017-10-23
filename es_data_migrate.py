@@ -7,11 +7,11 @@ from es_data_migrate import ElasticSearchDataMigrate
 from es_wrapper_client import ElasticSearchWrapperClient
 
 if __name__ == '__main__':
-    es_migrate_tool = ElasticSearchDataMigrate('http://l-es2.data.p1.11bee.com:9273/',
-                                               'http://l-es2.data.p1.11bee.com:9273/')
+    es_migrate_tool = ElasticSearchDataMigrate('http://xxx.com:9273/',
+                                               'http://xxx.com:9273/')
 
-    es_migrate_tool.tiny_migrate('nb_resume_idx_v2', 'nb_resume_idx_v3', 'resume',
-                                 'resume', '{\"query\": {\"match_all\": {}}, \"size\": 5000}')
+    es_migrate_tool.tiny_migrate('recording_analysis_idx', 'recording_analysis_idx_v1', 'recording_analysis',
+                                 'recording_analysis', '{\"query\": {\"match_all\": {}}, \"size\": 10000}')
 
     # file_ids_1 = open('/home/zshell/Desktop/task_no/no_taskout.txt', 'r')
     # file_ids_2 = open('/home/zshell/Desktop/task_no/no_secondtest.txt', 'r')
@@ -24,8 +24,8 @@ if __name__ == '__main__':
     # no_file_ids = open('/home/zshell/Desktop/task_no/no_2.txt', 'w')
     #
     # try:
-    #     es_migrate_tool = ElasticSearchDataMigrate('http://l-es1.data.p1.11bee.com:9273/')
-    #     es_request_tool = ElasticSearchWrapperClient('http://l-nbstores7.ins.cn2.qunar.com:9222/')
+    #     es_migrate_tool = ElasticSearchDataMigrate('http://xxx.com:9273/')
+    #     es_request_tool = ElasticSearchWrapperClient('http://xxx.com:9222/')
     #     pure_id_list = []
     #     id_list = file_ids_1.readlines()
     #     for doc_id in id_list:

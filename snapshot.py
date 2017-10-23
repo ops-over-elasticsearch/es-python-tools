@@ -70,5 +70,5 @@ if __name__ == '__main__':
         'week': snapshot_per_week
     }
 
-    func = switcher.get(args.backup_level)
+    func = switcher[args.backup_level]
     func(args.index)

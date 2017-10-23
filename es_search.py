@@ -7,7 +7,7 @@ from es_wrapper_client import ElasticSearchWrapperClient
 import json
 
 if __name__ == '__main__':
-    es_client = ElasticSearchWrapperClient("http://l-nbstores7.ins.cn2.qunar.com:9222")
+    es_client = ElasticSearchWrapperClient("http://xxx.com:9222")
     strsss = ',\"from\":0, \"size\":10000'
     search_dsl = '{\"filter\":{\"bool\":{\"must\":[{\"terms\":{\"businessChanceId\":[%s]}},{\"term\":{\"nature\":4}},{\"term\":{\"channel\":\"2dj\"}},{\"terms\":{\"taskStatus\":[0,1]}}]}},\"size\":300,"_source":[\"businessChanceId\"]}'
     id_file = open('/home/zshell/Desktop/bid.txt', 'r')

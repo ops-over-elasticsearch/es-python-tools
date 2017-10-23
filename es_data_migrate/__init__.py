@@ -95,12 +95,12 @@ class ElasticSearchDataMigrate:
 
 
 if __name__ == '__main__':
-    es_migrate_tool = ElasticSearchDataMigrate('http://l-es1.data.p1.11bee.com:9273/',
-                                               'http://l-nbdata5.f.dev.cn0.qunar.com:9273/')
+    es_migrate_tool = ElasticSearchDataMigrate('http://xxx.com:9273/',
+                                               'http://xxx.com:9273/')
     es_migrate_tool.tiny_migrate('nbdata_user_resume_info_idx', 'nbdata_user_resume_info_idx', 'user_resume_info',
                                  'user_resume_info')
 
-    es_request_tool = ElasticSearchWrapperClient('http://l-nbdata5.f.dev.cn0.qunar.com:9273/')
+    es_request_tool = ElasticSearchWrapperClient('http://xxx.com:9273/')
     file_ids = open('/home/zshell/Documents/task_no/test', 'r')
     id_list = file_ids.readlines()
     es_migrate_tool.tiny_migrate_by_id(id_list, 'history_task_info', 'task_info_idx', 'task_info', 'task_info')
